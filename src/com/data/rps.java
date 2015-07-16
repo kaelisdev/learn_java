@@ -19,13 +19,13 @@ public class rps {
         }
         switch (hand){
             case ROCK:
-                System.out.println("RocK");
+                System.out.println("камень");
                 break;
             case PAPER:
-                System.out.println("Paper");
+                System.out.println("бумага");
                 break;
             case SCISSORS:
-                System.out.println("Scissors");
+                System.out.println("ножницы");
                 break;
             default:
                 System.out.println("Invalid");
@@ -39,18 +39,18 @@ public class rps {
         // 2:3 = 5 => scissors
         switch ((yourHand == myHand) ? 0 : (yourHand + myHand)){
             case 0:
-                System.out.println("draw");
+                System.out.println("ничья");
                 break;
             case 3:
-                System.out.println("paper beats rock");
+                System.out.println("бумага накрывает камень");
                 printWinner(yourHand, 2);
                 break;
             case 4:
-                System.out.println("rock beats scissors");
+                System.out.println("камень ломает ножницы");
                 printWinner(yourHand, 1);
                 break;
             case 5:
-                System.out.println("scissors beats paper");
+                System.out.println("ножницы разрезают бумагу");
                 printWinner(yourHand, 3);
                 break;
             default:
@@ -61,27 +61,27 @@ public class rps {
 
     private static void printWinner(int yourHand, int winningHand){
         if(yourHand == winningHand){
-            System.out.println("you win");
+            System.out.println("Вы победили");
         }
         else {
-            System.out.println("i win");
+            System.out.println("Вы проиграли");
         }
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Let's Play Rock, Paper, Scissors");
-        System.out.println("  Enter 1 (Rock)");
-        System.out.println("  Enter 2 (Paper)");
-        System.out.println("  Enter 3 (Scissors)");
+        System.out.println("Камень, Камень, бумага");
+        System.out.println("  введите 1 (Камень)");
+        System.out.println("  введите 2 (бумага)");
+        System.out.println("  введите 3 (Камень)");
         System.out.print("> ");
 
         int playerHand = input.hasNextInt() ? input.nextInt() : -99;
         int computerHand = (int)(3*Math.random()) + 1;
 
-        System.out.print("your hand: (" + playerHand + ") ");
+        System.out.print("у вас: (" + playerHand + ") ");
         getHand(playerHand);
-        System.out.print("my hand: (" + computerHand + ") ");
+        System.out.print("у меня: (" + computerHand + ") ");
         getHand(computerHand);
         playHands(playerHand,computerHand);
     }
