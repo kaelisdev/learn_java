@@ -101,22 +101,22 @@ public enum FieldType {
     public static void main(String... args) {
 
         String fieldName = "password";
-        String fieldValue = "1Cxy9";  // invalid - must be at least 6 characters
+        String fieldValue = "1Cxy9asd15ds";
         FieldType field = lookup(fieldName);
         printValid(field, fieldValue, field.validate(fieldValue));
 
         fieldName = "phone";
-        fieldValue = "1-800-555-1234";  // valid
+        fieldValue = "1-800-555-1234";
         field = lookup(fieldName);
         printValid(field, fieldValue, field.validate(fieldValue));
 
         fieldName = "email";
-        fieldValue = "john@doe";  // invalid - missing .<tld>
+        fieldValue = "johndoe@gmail.com";
         field = lookup(fieldName);
         printValid(field, fieldValue, field.validate(fieldValue));
 
         fieldName = "ssn";
-        fieldValue = "111-11-1111";  // valid
+        fieldValue = "aaaaaaa11111111111111";
         field = lookup(fieldName);
         printValid(field, fieldValue, field.validate(fieldValue));
     }
