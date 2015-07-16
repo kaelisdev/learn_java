@@ -1,5 +1,7 @@
 package com.data;
 
+import java.util.Scanner;
+
 /**
  * Created by ion on 7/16/15.
  */
@@ -65,5 +67,22 @@ public class rps {
             System.out.println("i win");
         }
     }
-    
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Let's Play Rock, Paper, Scissors");
+        System.out.println("  Enter 1 (Rock)");
+        System.out.println("  Enter 2 (Paper)");
+        System.out.println("  Enter 3 (Scissors)");
+        System.out.print("> ");
+
+        int playerHand = input.hasNextInt() ? input.nextInt() : -99;
+        int computerHand = (int)(3*Math.random()) + 1;
+
+        System.out.print("your hand: (" + playerHand + ") ");
+        getHand(playerHand);
+        System.out.print("my hand: (" + computerHand + ") ");
+        getHand(computerHand);
+        playHands(playerHand,computerHand);
+    }
 }
