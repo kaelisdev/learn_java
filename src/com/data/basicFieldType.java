@@ -8,9 +8,8 @@ import java.util.Arrays;
 public class basicFieldType {
 
     public  enum FieldType {
-        PASSWORD, EMAIL_ADDRESS, PHONE_NUMBER, SOCIAL_SECURITY_NUMBER
+        PASSWORD,EMAIL_ADDRESS, PHONE_NUMBER, SOCIAL_SECURITY_NUMBER
     }
-
     public static void main(String[] args) {
         FieldType field = FieldType.EMAIL_ADDRESS;
 
