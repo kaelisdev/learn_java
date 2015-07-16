@@ -1,4 +1,4 @@
-package com.dates.data;
+package com.dates;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,7 +14,9 @@ public class formatDataForDisplay {
     public static void formatData(){
         Calendar cal = Calendar.getInstance();
 
-        SimpleDateFormat dateFormatter1 = new SimpleDateFormat("mm dd yyyy");
+        SimpleDateFormat dateFormatter1 = new SimpleDateFormat("MMMMM/dd/yyyy");
+        System.out.println(dateFormatter1.format(cal.getTime()));
+        dateFormatter1.applyPattern("hh:mm:ss MM-dd-YY");
         System.out.println(dateFormatter1.format(cal.getTime()));
 
     }
