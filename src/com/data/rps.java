@@ -41,9 +41,19 @@ public class rps {
                 break;
             case 3:
                 System.out.println("paper beats rock");
+                printWinner(yourHand, 2);
                 break;
             case 4:
-                System.out.println();
+                System.out.println("rock beats scissors");
+                printWinner(yourHand, 1);
+                break;
+            case 5:
+                System.out.println("scissors beats paper");
+                printWinner(yourHand, 3);
+                break;
+            default:
+                System.out.println("you cheated");
+                printWinner(yourHand, myHand);
         }
     }
 
@@ -55,4 +65,5 @@ public class rps {
             System.out.println("i win");
         }
     }
+    
 }
